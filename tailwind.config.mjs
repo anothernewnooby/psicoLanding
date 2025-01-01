@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				naranja: "#f1bf98",
+				naranja: "#EE6055",
 				verdeLima: "#e1f4cb",
 				verdeCrema: "#F2F6D0",
 				verdeSeco: "#bacba9",
@@ -17,7 +17,7 @@ export default {
 				poppins: ['Poppins', 'sans-serif'], 
 			},
 			fontSize: {
-				'1xl': '1.25rem', // Define el tamaño personalizado de fuente
+				'1xl': '1.25rem', 
 			  },
 		},
 	},
