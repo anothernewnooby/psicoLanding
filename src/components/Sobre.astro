@@ -1,9 +1,15 @@
 <main
   class="flex flex-col lg:flex-row justify-center items-stretch w-full h-auto rounded-lg mt-4 space-y-6 lg:space-y-0 lg:space-x-4"
+  x-data="{ show: false }"
+  x-init="setTimeout(() => show = true, 100)"
 >
   <!-- Segunda sección -->
   <section
     class="bg-verdeOscuro w-full lg:w-2/6 rounded-lg border-4 border-verdeLima flex flex-col justify-center items-center p-6"
+    x-show="show"
+    x-transition:enter="transition ease-out duration-700"
+    x-transition:enter-start="opacity-0 transform -translate-x-4"
+    x-transition:enter-end="opacity-100 transform translate-x-0"
   >
     <h2
       class="text-3xl md:text-4xl font-poppins font-bold text-verdeLima text-center leading-snug"
@@ -15,6 +21,10 @@
   <!-- Primera sección -->
   <section
     class="bg-verdeCrema w-full lg:w-4/6 rounded-lg flex flex-col lg:flex-row justify-center items-center p-6"
+    x-show="show"
+    x-transition:enter="transition ease-out duration-700 delay-200"
+    x-transition:enter-start="opacity-0 transform translate-x-4"
+    x-transition:enter-end="opacity-100 transform translate-x-0"
   >
     <div class="w-full lg:w-3/5 mb-8 lg:mb-0">
       <p

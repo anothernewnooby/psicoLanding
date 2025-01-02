@@ -1,8 +1,14 @@
 <main
   class="w-full lg:h-96 h-auto mt-4 rounded-lg text-center flex justify-center items-center lg:flex-row flex-col space-y-4 lg:space-y-0 lg:space-x-4"
+  x-data="{ show: false }"
+  x-init="setTimeout(() => show = true, 100)"
 >
   <section
     class="lg:w-2/6 w-full lg:h-96 h-auto flex justify-center items-center border-4 border-verdeLima p-4 rounded-lg"
+    x-show="show"
+    x-transition:enter="transition ease-out duration-700"
+    x-transition:enter-start="opacity-0 transform -translate-x-4"
+    x-transition:enter-end="opacity-100 transform translate-x-0"
   >
     <h2
       class="text-4xl lg:text-4xl font-poppins font-bold text-verdeLima text-center"
@@ -12,6 +18,10 @@
   </section>
   <section
     class="lg:w-4/6 w-full lg:h-96 h-auto bg-verdeCrema rounded-lg flex justify-center items-center lg:flex-row flex-col"
+    x-show="show"
+    x-transition:enter="transition ease-out duration-700"
+    x-transition:enter-start="opacity-0 transform -translate-x-4"
+    x-transition:enter-end="opacity-100 transform translate-x-0"
   >
     <div class="w-full lg:w-2/5 px-4">
       <img
