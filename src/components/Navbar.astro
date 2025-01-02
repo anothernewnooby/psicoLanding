@@ -1,35 +1,60 @@
 <nav aria-label="Menú principal" class="w-full bg-verdeCrema rounded-lg">
   <div class="relative flex justify-between items-center p-2 px-6">
     <!-- Logo y nombre -->
-    <div class="flex justify-center items-center flex-row space-x-1 text-1xl font-poppins text-verdeGris">
-      <h1 class="font-bold">Psicóloga</h1>
-      <h2 class="font-bold">Cinthya Monzón</h2>
+    <div
+      class="flex flex-col sm:flex-row justify-center items-center sm:space-x-1 space-y-1 sm:space-y-0 text-lg sm:text-xl md:text-2xl lg:text-3xl font-poppins text-verdeOscuro"
+    >
+      <h1 class="font-bold text-center sm:text-left">Psicóloga</h1>
+      <h2 class="font-bold text-center sm:text-left">Cinthya Monzón</h2>
     </div>
 
     <!-- Botón menú móvil -->
-    <button 
+    <button
       id="menuButton"
       class="md:hidden text-verdeGris transition-transform duration-300"
       aria-label="Menú"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </button>
 
     <!-- Menú navegación -->
-    <div id="menuItems" class="hidden md:block absolute md:relative top-full left-0 right-0 md:top-auto bg-verdeCrema md:bg-transparent w-full md:w-auto mt-2 md:mt-0 transform transition-all duration-300 ease-in-out opacity-0 scale-95 md:opacity-100 md:scale-100">
-      <ul class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-5 text-1xl font-poppins font-medium text-verdeGris p-4 md:p-0">
-        <li class="hover:bg-naranja hover:text-verdeCrema hover:p-2 hover:rounded-lg duration-300 w-full md:w-auto text-center">
+    <div
+      id="menuItems"
+      class="hidden md:block absolute md:relative top-full left-0 right-0 md:top-auto bg-verdeCrema md:bg-transparent w-full md:w-auto mt-2 md:mt-0 transform transition-all duration-300 ease-in-out opacity-0 scale-95 md:opacity-100 md:scale-100"
+    >
+      <ul
+        class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-5 text-1xl font-poppins font-medium text-verdeGris p-4 md:p-0"
+      >
+        <li
+          class="hover:bg-naranja hover:text-verdeCrema hover:p-2 hover:rounded-lg duration-300 w-full md:w-auto text-center"
+        >
           <a href="#home">Inicio</a>
         </li>
-        <li class="hover:bg-naranja hover:text-verdeCrema hover:p-2 hover:rounded-lg duration-300 w-full md:w-auto text-center">
+        <li
+          class="hover:bg-naranja hover:text-verdeCrema hover:p-2 hover:rounded-lg duration-300 w-full md:w-auto text-center"
+        >
           <a href="#sobre-mi">Sobre mí</a>
         </li>
-        <li class="hover:bg-naranja hover:text-verdeCrema hover:p-2 hover:rounded-lg duration-300 w-full md:w-auto text-center">
+        <li
+          class="hover:bg-naranja hover:text-verdeCrema hover:p-2 hover:rounded-lg duration-300 w-full md:w-auto text-center"
+        >
           <a href="#terapia">Terapia</a>
         </li>
-        <li class="bg-naranja p-2 rounded-lg text-verdeCrema hover:text-naranja hover:bg-verdeCrema duration-300 hover:border-2 hover:border-naranja w-full md:w-auto text-center">
+        <li
+          class="bg-naranja p-2 rounded-lg text-verdeCrema hover:text-naranja hover:bg-verdeCrema duration-300 hover:border-2 hover:border-naranja w-full md:w-auto text-center"
+        >
           <a href="#contacto">Contacto</a>
         </li>
       </ul>
@@ -38,15 +63,15 @@
 </nav>
 
 <script>
-  const menuButton = document.getElementById('menuButton');
-  const menuItems = document.getElementById('menuItems');
+  const menuButton = document.getElementById("menuButton");
+  const menuItems = document.getElementById("menuItems");
 
-  menuButton?.addEventListener('click', () => {
-    menuItems?.classList.toggle('hidden');
+  menuButton?.addEventListener("click", () => {
+    menuItems?.classList.toggle("hidden");
 
     setTimeout(() => {
-      menuItems?.classList.toggle('opacity-0');
-      menuItems?.classList.toggle('scale-95');
+      menuItems?.classList.toggle("opacity-0");
+      menuItems?.classList.toggle("scale-95");
     }, 10);
   });
 </script>
